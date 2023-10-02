@@ -18,4 +18,9 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+
+    # Increase file size limits
+    php_value upload_max_filesize 1000M  # Set the maximum file size to 1000MB (1GB)
+    php_value post_max_size 1000M        # Set the maximum POST data size to 1000MB (1GB)
+
 </IfModule>
